@@ -1,0 +1,12 @@
+{% extends "bootstrap_base3.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <form novalidate action="." method="post">
+        {{ equipment_form|crispy }}
+        {% csrf_token %}
+        <input type="submit" value="Add">
+    </form>
+
+{% endblock %}

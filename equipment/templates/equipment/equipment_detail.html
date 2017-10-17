@@ -1,0 +1,15 @@
+{% extends "equipment/equipment_detail_tabs.html" %}
+
+{% block tab_content %}
+
+
+                <h3>HOME</h3>
+                <p>{{ object.type }}</p>
+                <p>{{ object.serial_no }}</p>
+                <p>
+                    <a class="btn btn-default" href="{{ object.get_absolute_url }}update" role="button">Изменить</a>
+                    <a class="btn btn-default" href="{{ object.get_absolute_url }}delete" role="button">Удалить</a>
+                </p>
+
+
+{% endblock %}

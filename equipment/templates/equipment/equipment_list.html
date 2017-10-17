@@ -1,0 +1,23 @@
+{% extends "bootstrap_base3.html" %}
+
+{% block content %}
+
+    <table class="table table-hover">
+        <tr>
+            <th></th>
+            <th>Оборудование</th>
+            <th>Заводской номер</th>
+             <th>Групы</th>
+        </tr>
+        {% for e in object_list %}
+            <tr>
+                <td><a class="btn btn-default" href="{{ e.get_absolute_url }}" role="button">></a></td>
+                <td>{{ e.type }}</td>
+                <td>{{ e.serial_no }}</td>
+            <td>{{ e.tags.all|join:", " }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock %}
